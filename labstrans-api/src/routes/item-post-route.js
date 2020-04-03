@@ -51,7 +51,7 @@ function insertItem(item, res, db){
 
 function validateRequest(req, res) {
     var fs = require('fs');
-    var schema = JSON.parse(fs.readFileSync('app/data/item-schema.json', 'utf8'));
+    var schema = JSON.parse(fs.readFileSync('src/data/item-schema.json', 'utf8'));
 
     var JaySchema = require('jayschema');
     var js = new JaySchema();

@@ -47,7 +47,7 @@ function insertImage(image, res, db){
 
 function validateRequest(req, res) {
     var fs = require('fs');
-    var schema = JSON.parse(fs.readFileSync('app/data/image-schema.json', 'utf8'));
+    var schema = JSON.parse(fs.readFileSync('src/data/image-schema.json', 'utf8'));
 
     var JaySchema = require('jayschema');
     var js = new JaySchema();
