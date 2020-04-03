@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS Items
+( 
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    description VARCHAR(50) NOT NULL, 
+    color VARCHAR(10) NOT NULL, 
+    imageId VARCHAR(5) NOT NULL,
+    position VARCHAR(800) NOT NULL 
+);

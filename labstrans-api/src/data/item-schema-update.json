@@ -1,0 +1,29 @@
+{
+    "title": "Item",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string",
+            "maxLength": 50
+        },
+        "color": {
+            "type": "string",
+            "maxLength": 10
+        },
+        "imageId": {
+            "type": "string"
+        },
+        "position": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "id",
+        "description",
+        "color",
+        "imageId"
+    ]
+}

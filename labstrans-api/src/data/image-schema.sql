@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS Images
+( 
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    name VARCHAR(50) NOT NULL , 
+    processed BOOLEAN NOT NULL , 
+    "path" VARCHAR(150) NOT NULL 
+);
+

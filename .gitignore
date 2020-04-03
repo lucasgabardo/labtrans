@@ -1,0 +1,24 @@
+labtrans-api/node_modules
+labtrans-api/dist
+
+labtrans-app/labtrans-api/.DS_Store
+labtrans-app/node_modules
+labtrans-app/dist
+
+# local env files
+labtrans-app/.env.local
+labtrans-app/.env.*.local
+
+# Log files
+labtrans-app/npm-debug.log*
+labtrans-app/yarn-debug.log*
+labtrans-app/yarn-error.log*
+
+# Editor directories and files
+labtrans-app/.idea
+labtrans-app/.vscode
+labtrans-app/*.suo
+labtrans-app/*.ntvs*
+labtrans-app/*.njsproj
+labtrans-app/*.sln
+labtrans-app/*.sw?

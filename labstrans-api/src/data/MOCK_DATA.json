@@ -1,0 +1,50 @@
+[
+	{
+	    "name":"BR-163 – Santarém – Pará",
+	    "processed":false,
+	    "path":"../assets/imagem1.jpg"
+	},
+	{
+	    "name":"BR-364 – Feijó – Acre",
+	    "processed":false,
+	    "path":"../assets/imagem2.jpg"
+	},
+	{
+	    "name":"BR-230 – Rodovia Transamazônica",
+	    "processed":true,
+	    "path":"../assets/imagem3.jpg"
+	},
+	{
+	    "name":"BR 101 – Ubatuba – SP",
+	    "processed":false,
+	    "path":"../assets/imagem4.jpg"
+	}
+]
+
+
+[
+	{
+	    "description":"Panela",
+	    "color":"#4285f4",
+	    "imageId":"1"
+        "position": 
+    },
+	{
+	    "description":"Remendo",
+	    "color":"#ea4335",
+	    "imageId":"1"
+        "position": 
+	},
+	{
+	    "description":"Drenagem",
+	    "color":"#fbbc05",
+	    "imageId":"1"
+        "position": 
+	},
+	{
+	    "description":"Placa",
+	    "color":"#34a853",
+	    "imageId":"1"
+        "position": 
+	}
+]

@@ -1,0 +1,25 @@
+{
+    "title": "Image",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string",
+            "maxLength": 50
+        },
+        "processed": {
+            "type": "boolean"
+        },
+        "path": {
+            "type": "string",
+            "maxLength": 150
+        }
+    },
+    "required": [
+        "name",
+        "processed",
+        "path"
+    ]
+}
