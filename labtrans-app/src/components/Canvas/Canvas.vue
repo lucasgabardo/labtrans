@@ -19,7 +19,7 @@
             </div>
             
             <div class="markup__input-wrapper">
-              <input focus v-bind:id="'input-' + markup.id" type="text" class="markInput" @keyup="changeMarkupName($event, markup.id)"/>
+              <input placeholder="Descrição" v-bind:id="'input-' + markup.id" type="text" class="markInput" @keyup="changeMarkupName($event, markup.id)"/>
               <div class="markup__color-picker">
                 <button class="markup__color-picker__picked" v-bind:style="{ 'background-color': markup.color}"></button>
                 <div class="markup__color-picker__colors" >
@@ -201,7 +201,10 @@
       saveMarkup(markupId){
         this.markups = this.markups.map((m) => {
           if(m.id === markupId){
-            m.saved = true;           
+            m.saved = true;
+            if(!m.description){
+                m.description = "Sem descrição";          
+            }
           }
           return m;
         });
