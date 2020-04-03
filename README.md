@@ -25,7 +25,7 @@ labtrans-app/
 
 ```bash
 $ cd labtrans-app
-npm install
-npm start
+$ npm install
+$ npm start
 ```
 
