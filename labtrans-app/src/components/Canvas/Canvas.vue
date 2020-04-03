@@ -38,7 +38,6 @@
             'top': markup.position.last_mousey + 'px',
             'width': (markup.position.last_mousex > markup.position.mousex ? (markup.position.last_mousex - markup.position.mousex) : (markup.position.mousex - markup.position.last_mousex)) + 'px',
             'background-color': markup.color}">
-            
           {{markup.description}}
           <a alt="Remover marcação" @click="removeMarkup(markup.id)">
             <md-icon class="icon--close">close</md-icon>
@@ -100,7 +99,6 @@
       }
 
         if(this.currentMarkups){
-          console.log('this.currentMarkups', this.currentMarkups)
           this.markups = this.currentMarkups.map((m) => { 
             if(typeof m.position === "string"){
               m.position = JSON.parse(m.position.replace(/'/g, '"'));                            
@@ -121,6 +119,11 @@
         let last_mousey = 0;
         let mousex = 0;
         let mousey = 0;
+
+        window.addEventListener('resize', () => {
+          canvasx = this.canvasWrapper.offsetLeft;
+          canvasy = this.canvasWrapper.offsetTop + 40;
+        });
 
         this.canvas.addEventListener('mousedown', (e) => {
           last_mousex = parseInt(e.clientX-canvasx);
@@ -226,7 +229,6 @@
   }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
   .onboarding-wrapper{
     position: relative;

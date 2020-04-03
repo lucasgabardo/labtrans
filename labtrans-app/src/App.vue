@@ -70,16 +70,18 @@ export default {
           }else if(!this.currentImage){
             this.currentImage = this.images[0];
           }
-
+          
           axios
             .get('http://localhost:3000/api/item')
-            .then((response) => {                       
+            .then((response) => {                                  
               this.markups = response.data;
               this.currentMarkups = this.markups.filter((m) => parseInt(m.imageId) === this.currentImage.id);
             })
-            .catch(() => {
-              console.error('Erro ao buscar marcações');
-            })
+            .catch((e) => {
+              console.error('Erro ao buscar marcações', e);
+              this.markups = [];
+              this.currentMarkups = [];
+            })          
       })
     },
     confirmChange(save) {
@@ -148,13 +150,12 @@ export default {
         this.snackbarMessage = "Nenhuma alteração foi feita";
         this.showSnackbar = true;        
       }
-      
+      console.log('deletedMarkups.length', deletedMarkups)
       if(deletedMarkups.length){
          if(deletedMarkups.length){
           axios.delete('http://localhost:3000/api/item', 
             {data:deletedMarkups})
-            .then(() => { 
-              this.getImages();
+            .then(() => {
               this.snackbarMessage = "Imagem salva com sucesso";
               this.showSnackbar = true;        
             })
@@ -169,10 +170,11 @@ export default {
 
       const newImage = {...this.currentImage};
       newImage.processed = true;
-      console.log(JSON.stringify(newImage))
+      newImage.id = newImage.id.toString();
       axios.put('http://localhost:3000/api/image', newImage)
         .then(() => { 
-          console.error('Imagem atualizada');       
+          console.log('Imagem atualizada');    
+          this.getImages();  
         })
         .catch(() => {
           console.error('Erro ao salvar imagem');
